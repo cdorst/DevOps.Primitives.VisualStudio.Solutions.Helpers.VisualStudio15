@@ -1,7 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Authors>cdorst</Authors>
+    <Description>Helpers for building VS 15 .sln Visual Studio solution files</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>CDorst.DevOps.Primitives.VisualStudio.Solutions.Helpers.VisualStudio15</PackageId>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>0.1.0</Version>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CDorst.DevOps.Primitives.VisualStudio.Solutions.Helpers.Common" Version="1.0.0" />
+  </ItemGroup>
 
 </Project>
