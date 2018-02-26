@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using static System.Guid;
+using static System.IO.Path;
 
 namespace DevOps.Primitives.VisualStudio.Solutions.Helpers.VisualStudio15
 {
@@ -13,6 +15,12 @@ namespace DevOps.Primitives.VisualStudio.Solutions.Helpers.VisualStudio15
                 Vs15VersionInfo.Create(),
                 sourceProjects,
                 testsProjects);
+
+        public static Solution SingleProject(string name)
+            => Common.Solutions.SingleProject(
+                name,
+                Vs15VersionInfo.Create(),
+                new SolutionProject(NewGuid(), name, Combine(name, $"{name}.csproj")));
 
         public static Solution SingleProject(
             string name,
