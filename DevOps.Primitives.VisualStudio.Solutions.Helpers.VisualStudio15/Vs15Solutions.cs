@@ -1,33 +1,34 @@
 ﻿using System.Collections.Generic;
 using static DevOps.Primitives.VisualStudio.Solutions.Helpers.Common.SolutionGuidGetter;
 using static System.IO.Path;
+using static System.String;
 
 namespace DevOps.Primitives.VisualStudio.Solutions.Helpers.VisualStudio15
 {
     public static class Vs15Solutions
     {
         public static Solution Create(
-            string name,
-            IEnumerable<SolutionProject> sourceProjects,
-            IEnumerable<SolutionProject> testsProjects)
+            in string name,
+            in IEnumerable<SolutionProject> sourceProjects,
+            in IEnumerable<SolutionProject> testsProjects)
             => Common.Solutions.Create(
-                name,
+                in name,
                 Vs15VersionInfo.Create(),
-                sourceProjects,
-                testsProjects);
+                in sourceProjects,
+                in testsProjects);
 
-        public static Solution SingleProject(string name)
+        public static Solution SingleProject(in string name)
             => Common.Solutions.SingleProject(
-                name,
+                in name,
                 Vs15VersionInfo.Create(),
-                new SolutionProject(GetGuid($"proj:{name}"), name, Combine(name, $"{name}.csproj")));
+                new SolutionProject(GetGuid(Concat("proj:", name)), in name, Combine(name, Concat(name, ".csproj"))));
 
         public static Solution SingleProject(
-            string name,
-            SolutionProject project)
+            in string name,
+            in SolutionProject project)
             => Common.Solutions.SingleProject(
-                name,
+                in name,
                 Vs15VersionInfo.Create(),
-                project);
+                in project);
     }
 }
