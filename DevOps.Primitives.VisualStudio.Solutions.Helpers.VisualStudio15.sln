@@ -3,7 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevOps.Primitives.VisualStudio.Solutions.Helpers.VisualStudio15", "DevOps.Primitives.VisualStudio.Solutions.Helpers.VisualStudio15\DevOps.Primitives.VisualStudio.Solutions.Helpers.VisualStudio15.csproj", "{537BCCCC-71D5-4A3D-81F3-60019F8F1CB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevOps.Primitives.VisualStudio.Solutions.Helpers.VisualStudio15", "DevOps.Primitives.VisualStudio.Solutions.Helpers.VisualStudio15\DevOps.Primitives.VisualStudio.Solutions.Helpers.VisualStudio15.csproj", "{537BCCCC-71D5-4A3D-81F3-60019F8F1CB0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E279E77A-6F7B-41B9-BE23-0D7A804599F4}"
+	ProjectSection(SolutionItems) = preProject
+		appveyor.yml = appveyor.yml
+		LICENSE = LICENSE
+		nuget.config = nuget.config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
